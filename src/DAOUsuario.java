@@ -18,13 +18,13 @@ public class DAOUsuario {
 
 		try {
 
-			PreparedStatement pst = conexao.getConexao().prepareStatement("insert into usuario(nome, email, senha, profissao, data_nascimento) values(?,?,?,?,?)");
+			PreparedStatement pst = conexao.getConexao().prepareStatement("insert into usuario(nome, email, senha, profissao, dataNascimento) values(?,?,?,?,?)");
 
 			pst.setString(1, u.getNome());
 			pst.setString(2, u.getEmail());
 			pst.setString(3, u.getSenha());
 			pst.setString(4, u.getProfissao());
-			pst.setDate(5, u.getData_nascimento());
+			pst.setDate(5, u.getDataNascimento());
 
 			pst.execute();
 		} catch (SQLException e) {
@@ -50,13 +50,13 @@ public class DAOUsuario {
 			String emailUsuario = resultado.getString("email");
 			String senhaUsuario = resultado.getString("senha");
 			String profissaoUsuario = resultado.getString("profissao");
-			Date data_nascimentoUsuario = resultado.getDate("data_nascimento");
+			Date dataNascimentoUsuario = resultado.getDate("dataNascimento");
 			
 			u.setNome(nomeUsuario);
 			u.setEmail(emailUsuario);
 			u.setSenha(senhaUsuario);
 			u.setProfissao(profissaoUsuario);
-			u.setData_nascimento(data_nascimentoUsuario);
+			u.setDataNascimento(dataNascimentoUsuario);
 			
 		} catch (SQLException e) {
 			System.out.println("Erro: " + e.getMessage());
@@ -79,17 +79,17 @@ public class DAOUsuario {
 		}
 	}
 
-	public void editarUsuario(String nome, String email, String senha, String profissao, Date data_nascimento) {
+	public void editarUsuario(String nome, String email, String senha, String profissao, Date dataNascimento) {
 		conexao.conectar();
 		
 		try {
-			PreparedStatement stm = conexao.getConexao().prepareStatement("update usuario set nome = ?, email = ?, senha = ?, profissao = ?, data_nascimento = ? "
+			PreparedStatement stm = conexao.getConexao().prepareStatement("update usuario set nome = ?, email = ?, senha = ?, profissao = ?, dataNascimento = ? "
 					+ "where email like \'" + email + "\'");
 			stm.setString(1, nome);
 			stm.setString(2, email);
 			stm.setString(3, senha);
 			stm.setString(4, profissao);
-			stm.setDate(5, data_nascimento);
+			stm.setDate(5, dataNascimento);
 			stm.execute();
 		} catch (SQLException e) {
 			System.out.println("Erro: " + e.getMessage());
@@ -110,9 +110,9 @@ public class DAOUsuario {
 				String emailUsuario = resultado.getString("email");
 				String senhaUsuario = resultado.getString("senha");
 				String profissaoUsuario = resultado.getString("profissao");
-				Date data_nascimentoUsuario = resultado.getDate("data_nascimento");
+				Date dataNascimentoUsuario = resultado.getDate("dataNascimento");
 				
-				usuarios.add(new Usuario(nomeUsuario, emailUsuario, senhaUsuario, profissaoUsuario, data_nascimentoUsuario));
+				usuarios.add(new Usuario(nomeUsuario, emailUsuario, senhaUsuario, profissaoUsuario, dataNascimentoUsuario));
 			}
 		} catch (SQLException e) {
 			System.out.println("Erro: " + e.getMessage());
