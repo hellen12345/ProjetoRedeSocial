@@ -4,17 +4,17 @@ import java.util.ArrayList;
 public class Usuario {
 	
 	private String nome, email, senha, profissao;
-	    private Date data_nascimento;
+	    private Date dataNascimento;
 	    private ArrayList<Usuario> amigos = new ArrayList<Usuario>();
 	    
 	    public Usuario() {}
 	    
-	    public Usuario(String nome, String email, String senha, String profissao, Date data_nascimento) {
+	    public Usuario(String nome, String email, String senha, String profissao, Date dataNascimento) {
 	    	this.nome = nome;
 	    	this.email = email;
 	    	this.senha = senha;
 	    	this.profissao = profissao;
-	    	this.data_nascimento = data_nascimento;
+	    	this.dataNascimento = dataNascimento;
 	    }
 	    
 	    private void adicionarAmigo(Usuario amigos){
@@ -59,12 +59,12 @@ public class Usuario {
 			this.profissao = profissao;
 		}
 
-		public Date getData_nascimento() {
-			return data_nascimento;
+		public Date getDataNascimento() {
+			return dataNascimento;
 		}
 
-		public void setData_nascimento(Date data_nascimento) {
-			this.data_nascimento = data_nascimento;
+		public void setDataNascimento(Date data_nascimento) {
+			this.dataNascimento = data_nascimento;
 		}
 
 		public ArrayList<Usuario> getAmigos() {
