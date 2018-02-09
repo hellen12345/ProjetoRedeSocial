@@ -63,8 +63,8 @@ public class Usuario {
 			return dataNascimento;
 		}
 
-		public void setDataNascimento(Date data_nascimento) {
-			this.dataNascimento = data_nascimento;
+		public void setDataNascimento(Date dataNascimento) {
+			this.dataNascimento = dataNascimento;
 		}
 
 		public ArrayList<Usuario> getAmigos() {
