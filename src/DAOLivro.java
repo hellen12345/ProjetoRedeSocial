@@ -17,14 +17,14 @@ public class DAOLivro {
 
 		try {
 
-			PreparedStatement pst = conexao.getConexao().prepareStatement("insert into livro(nome_livro, autor_livro, resumo_livro, editora, genero, ano_publicacao) values(?,?,?,?,?,?)");
+			PreparedStatement pst = conexao.getConexao().prepareStatement("insert into livro(nomeLivro, autorLivro, resumoLivro, editora, genero, anoPublicacao) values(?,?,?,?,?,?)");
 
-			pst.setString(1, l.getNome_livro());
-			pst.setString(2, l.getAutor_livro());
-			pst.setString(3, l.getResumo_livro());
+			pst.setString(1, l.getNomeLivro());
+			pst.setString(2, l.getAutorLivro());
+			pst.setString(3, l.getResumoLivro());
 			pst.setString(4, l.getEditora());
 			pst.setString(5, l.getGenero());
-			pst.setInt(6, l.getAno_publicacao());
+			pst.setInt(6, l.getAnoPublicacao());
 
 			pst.execute();
 		} catch (SQLException e) {
@@ -53,12 +53,12 @@ public class DAOLivro {
 			String generoLivro = resultado.getString("genero");
 			int anoPublicacaoLivro = resultado.getInt("ano_publicacao");
 			
-			l.setNome_livro(nomeLivro);
-			l.setAutor_livro(autorLivro);
-			l.setResumo_livro(resumoLivro);
+			l.setNomeLivro(nomeLivro);
+			l.setAutorLivro(autorLivro);
+			l.setResumoLivro(resumoLivro);
 			l.setEditora(editoraLivro);
 			l.setGenero(generoLivro);
-			l.setAno_publicacao(anoPublicacaoLivro);
+			l.setAnoPublicacao(anoPublicacaoLivro);
 			
 		} catch (SQLException e) {
 			System.out.println("Erro: " + e.getMessage());
@@ -82,7 +82,7 @@ public class DAOLivro {
 	}
 
 	public void editarLivro(String nome, String autor, String resumo, String editora, String genero,
-			int ano_publicacao) {
+			int anoPublicacao) {
 		conexao.conectar();
 		
 		try {
