@@ -1,67 +1,67 @@
  public class Livro {
 	 
-	public String nome_livro, autor_livro, resumo_livro, editora, genero;
+	public String nomeLivro, autorLivro, resumoLivro, editora, genero;
 	 
-	public int ano_publicacao;
+	public int anoPublicacao;
 	
 	public Livro() {}
 
-	public Livro(String nome_livro, String autor_livro, String resumo_livro, String editora, String genero,
-			int ano_publicacao) {
-		this.nome_livro = nome_livro;
-		this.autor_livro = autor_livro;
-		this.resumo_livro = resumo_livro;
+	public Livro(String nomeLivro, String autorLivro, String resumoLivro, String editora, String genero,
+			int anoPublicacao) {
+		this.nomeLivro = nomeLivro;
+		this.autorLivro = autorLivro;
+		this.resumoLivro = resumoLivro;
 		this.editora = editora;
 		this.genero = genero;
-		this.ano_publicacao = ano_publicacao;
+		this.anoPublicacao = anoPublicacao;
 	}
 
-	public void curtir_livro() {
+	public void curtirLivro() {
 		
 	}
 	
-	public void comentar_livro() {
+	public void comentarLivro() {
 		
 	}
 	
-	public void compartilhar_livro() {
+	public void compartilharLivro() {
 		
 	}
 	
-	public void avaliacao_livro() {
+	public void avaliacaoLivro() {
 		
 	}
 	
-	public void abandonei_livro() {
+	public void abandoneiLivro() {
 		
 	}
 	
-	public void relendo_livro() {
+	public void relendoLivro() {
 		
 	}
 
-	public String getNome_livro() {
-		return nome_livro;
+	public String getNomeLivro() {
+		return nomeLivro;
 	}
 
-	public void setNome_livro(String nome_livro) {
-		this.nome_livro = nome_livro;
+	public void setNomeLivro(String nomeLivro) {
+		this.nomeLivro = nomeLivro;
 	}
 
-	public String getAutor_livro() {
-		return autor_livro;
+	public String getAutorLivro() {
+		return autorLivro;
 	}
 
-	public void setAutor_livro(String autor_livro) {
-		this.autor_livro = autor_livro;
+	public void setAutorLivro(String autorLivro) {
+		this.autorLivro = autorLivro;
 	}
 
-	public String getResumo_livro() {
-		return resumo_livro;
+	public String getResumoLivro() {
+		return resumoLivro;
 	}
 
-	public void setResumo_livro(String resumo_livro) {
-		this.resumo_livro = resumo_livro;
+	public void setResumoLivro(String resumoLivro) {
+		this.resumoLivro = resumoLivro;
 	}
 
 	public String getEditora() {
@@ -80,12 +80,12 @@
 		this.genero = genero;
 	}
 
-	public int getAno_publicacao() {
-		return ano_publicacao;
+	public int getAnoPublicacao() {
+		return anoPublicacao;
 	}
 
-	public void setAno_publicacao(int ano_publicacao) {
-		this.ano_publicacao = ano_publicacao;
+	public void setAnoPublicacao(int anoPublicacao) {
+		this.anoPublicacao = anoPublicacao;
 	}
 	 
 	
