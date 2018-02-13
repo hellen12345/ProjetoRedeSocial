@@ -120,6 +120,10 @@ public class DAOUsuario {
 			conexao.desconectar();
 		}
 		return usuarios;
-}
+	}
+	
+	public boolean addAmigo(String nome) {
+		return true;
+	};
 
 }

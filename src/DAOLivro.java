@@ -93,7 +93,7 @@ public class DAOLivro {
 			stm.setString(3, resumo);
 			stm.setString(4, editora);
 			stm.setString(5, genero);
-			stm.setInt(6, ano_publicacao);
+			stm.setInt(6, anoPublicacao);
 			stm.execute();
 		} catch (SQLException e) {
 			System.out.println("Erro: " + e.getMessage());
